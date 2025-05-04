@@ -115,8 +115,8 @@ function App() {
       const model = editor.getModel()!;
       const range = model.getFullModelRange();
 
-      // If there are at least 10 lines of code, ask for confirmation.
-      if (range.endLineNumber >= 10 && !confirmed) {
+      // If editor contains more than the initial line of code, ask for confirmation.
+      if (range.endLineNumber > 1 && !confirmed) {
         setReadCodeConfirmOpen(true);
         return;
       }
