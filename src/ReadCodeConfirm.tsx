@@ -27,10 +27,10 @@ function ReadCodeConfirm({ isOpen, onClose, onConfirm }: ReadCodeConfirmProps) {
     >
       <AlertDialogOverlay>
         <AlertDialogContent>
-          <AlertDialogHeader>Clear editor</AlertDialogHeader>
+          <AlertDialogHeader>Replace editor content?</AlertDialogHeader>
 
           <AlertDialogBody>
-            Opening Rustpad's source code will clear the existing shared
+            Opening Rustpad's source code will replace the existing shared
             content. Is this okay?
           </AlertDialogBody>
 
@@ -39,7 +39,7 @@ function ReadCodeConfirm({ isOpen, onClose, onConfirm }: ReadCodeConfirmProps) {
               Cancel
             </Button>
             <Button colorScheme="red" onClick={onConfirm} ml={3}>
-              Clear
+              Replace
             </Button>
           </AlertDialogFooter>
         </AlertDialogContent>
